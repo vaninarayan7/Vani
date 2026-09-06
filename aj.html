@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>student result</title>
+        <p id="resulttext"></p>
+    </head>
+    <body>
+        <h3>Student result:</h3>
+        <script>
+            let name=prompt("enter youe name:");
+            let age=prompt("enter your age:");
+            let marks=Number(prompt("enter your marks(outof100)"));
+            function checkResult(marks)
+            {
+                if(marks>=40)
+                {
+                    return "PASS";
+
+                }
+                else
+                {
+                    return "FAIL";
+                }
+            };
+            const student=
+            {
+                name:name,
+                age:age,
+                marks:marks,
+                result:checkResult(marks)
+            };
+            document.getElementById("resulttext").textContent = student.name = " is " + student.result+ " with " + student.marks + "marks."
+            console.log("student resuly");
+            console.log("name:",student.name);
+            console.log("age",student.age);
+            console.log("marks",student.marks);
+            console.log("result",student.result);
+        </script>
+    </body>
+</html>
